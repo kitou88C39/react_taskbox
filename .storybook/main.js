@@ -6,12 +6,13 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/preset-create-react-app',
     '@storybook/addon-interactions',
+    '@storybook/addon-a11y',
   ],
-  features: {
-    postcss: false,
-  },
   framework: '@storybook/react',
   core: {
-    builder: 'webpack4',
+    builder: '@storybook/builder-webpack5',
+  },
+  features: {
+    interactionsDebugger: true,
   },
 };
